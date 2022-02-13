@@ -287,6 +287,16 @@ footer h3 {
     }
 }
 
+header {
+    width: 100%;
+    border-bottom: 1px solid #bbb;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    backdrop-filter: blur(16px);
+    background-color: rgba(240, 240, 240, 0.8);
+}
+
 .g-header-container {
     display: flex;
     padding: 16px;
@@ -296,7 +306,7 @@ footer h3 {
 
 .g-nav-toggle_button {
     -webkit-appearance: none;
-    border: 1px solid #eee;
+    border: 1px solid #bbb;
     background: white;
     border-radius: 8px;
     padding: 4px;
@@ -337,13 +347,13 @@ footer h3 {
 
 @media screen and (max-width: 700px) {
     .g-nav-small {
-        position: absolute;
+        position: fixed;
         top: 56px;
         left: 0;
         right: 0;
-        bottom: 0;
-        background-color: #eee;
-        z-index: 10;
+        backdrop-filter: blur(16px);
+    background-color: rgba(240, 240, 240, 0.95);
+        z-index: 100;
         display: block;
         padding: 20px;
         opacity: 0;
@@ -367,7 +377,7 @@ footer h3 {
     }
 
     .g-nav-toggle {
-        display: block;
+        display: flex;
     }
 
     .g-contact-us {
