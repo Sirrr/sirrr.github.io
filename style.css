@@ -95,7 +95,6 @@ li {
     background-color: #3c9aff;
 }
 
-
 .g-logo {
     color: black;
     font-size: 20px;
@@ -293,6 +292,21 @@ footer h3 {
     padding: 16px;
     max-width: 1024px;
     margin: 0 auto;
+}
+
+.g-nav-toggle_button {
+    -webkit-appearance: none;
+    border: 1px solid #eee;
+    background: white;
+    border-radius: 8px;
+    padding: 4px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.g-nav-toggle_button:focus {
+    background-color: #eee;
 }
 
 .g-nav-toggle_button svg {
