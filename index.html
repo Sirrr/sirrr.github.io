@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fabric of Reality</title>
+</head>
+
+<body>
+    <header>
+        <div class="g-header-container">
+            <div class="g-logo">
+                <a class="logo" href="index.html">Fabric of Reality</a>
+            </div>
+
+            <div class="fill"></div>
+            <div class="g-nav flex g-nav-small">
+                <ul class="flex">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Features</a></li>
+                    <li><a href="index.html">Story</a></li>
+                    <li><a href="index.html">About</a></li>
+                </ul>
+                <div class="g-contact-us">
+                    <a href="#" target="_blank" class="g-button-primary nowrap">Contact us</a>
+                </div>
+            </div>
+
+            <div class="g-nav-toggle">
+                <button title="Open menu" class="g-nav-toggle_button" type="button" id="toggle-nav">
+                    <svg id="nav-burger-icon" class="flex"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" >
+                        <g fill="currentColor">
+                            <path d="M4 27h28v-3H4v3zm0-8h28v-3H4v3zM4 8v3h28V8H4z"></path>
+                        </g>
+                    </svg>
+                    <svg id="nav-close-icon" class="flex g-hidden" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+                        <g fill="currentColor">
+                            <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="g-main">
+        <div class="g-main_content">
+            <h1>The Fabric of Reality</h1>
+            <p>Battle and unleash secrets of the <b>Multiverse</b></p>
+            <a href="#" target="_blank" class="g-button-primary nowrap mt-1">Join Now</a>
+        </div>
+        <div class="g-main_img g-box_img">
+            <img class="g-img-contain" src="https://www.revolut.com/_next/image?url=https%3A%2F%2Fcdn.revolut.com%2Fwebsite%2Fassets%2Fretail%2Fstocks%2F01-overview.jpg&w=2048&q=75" alt="img">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="g-box">
+            <div class="g-box_content">
+                <h2>Battles</h2>
+                <p>Battle with other players and gain experience</p>
+                <a href="#">Get Started
+                    <svg viewBox="0 0 24 24" size="24" aria-label="Get started" class="">
+                        <g fill="currentColor">
+                            <path fill="currentColor" d="M20.5 11.992c0-.276-.105-.535-.306-.737L14.77 5.832a.919.919 0 0 0-1.3 0l-.324.325a.919.919 0 0 0 0 1.3l3.394 3.395H4.42a.919.919 0 0 0-.92.919v.46c0 .507.411.918.92.918h12.12l-3.394 3.394a.919.919 0 0 0 0 1.3l.325.325c.359.359.94.359 1.3 0l5.423-5.422c.204-.205.306-.477.306-.754Z"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="g-box_img">
+                <img class="g-img-contain" src="https://www.revolut.com/_next/image?url=https%3A%2F%2Fcdn.revolut.com%2Fwebsite%2Fassets%2Fretail%2Fstocks%2F01-overview.jpg&w=2048&q=75" alt="img">
+            </div>
+        </div>
+        <div class="g-box g-dir-reverse">
+            <div class="g-box_content">
+                <h2>Battles</h2>
+                <p>Battle with other players and gain experience</p>
+                <a href="#">Get Started
+                    <svg viewBox="0 0 24 24" size="24" aria-label="Get started" class="">
+                        <g fill="currentColor">
+                            <path fill="currentColor" d="M20.5 11.992c0-.276-.105-.535-.306-.737L14.77 5.832a.919.919 0 0 0-1.3 0l-.324.325a.919.919 0 0 0 0 1.3l3.394 3.395H4.42a.919.919 0 0 0-.92.919v.46c0 .507.411.918.92.918h12.12l-3.394 3.394a.919.919 0 0 0 0 1.3l.325.325c.359.359.94.359 1.3 0l5.423-5.422c.204-.205.306-.477.306-.754Z"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="g-box_img">
+                <img class="g-img-contain" src="https://www.revolut.com/_next/image?url=https%3A%2F%2Fcdn.revolut.com%2Fwebsite%2Fassets%2Fretail%2Fstocks%2F01-overview.jpg&w=2048&q=75" alt="img">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    document.getElementById('toggle-nav').onclick = () => {
+        const el = document.getElementsByClassName('g-nav-small')[0];
+        el.classList.toggle('g-nav-visible');
+        document.getElementById('nav-burger-icon').classList.toggle('g-hidden');
+        document.getElementById('nav-close-icon').classList.toggle('g-hidden');
+    };
+</script>
+
+</html>

@@ -1,0 +1,268 @@
+body {
+    background-color: rgb(243, 244, 245);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 18px;
+    color: #797979;
+    margin: 0;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1px;
+}
+
+a {
+    text-decoration: none;
+    color: #1686FE;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.fill {
+    flex: auto;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.g-hidden {
+    display: none;
+}
+
+.g-img-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.g-button-primary {
+    background-color: #1686FE;
+    color: white !important;
+    padding: 10px 32px !important;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.g-main {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.g-main p {
+    max-width: 300px;
+    line-height: 1.5em;
+    color: #585858;
+}
+
+.g-main_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.g-box {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 1000px;
+    background-color: white;
+    margin-bottom: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.g-box_content {
+    padding: 30px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.g-box_content>a {
+    display: flex;
+    margin-top: 1em;
+    font-size: 16px;
+}
+
+.g-box_img {
+    max-height: 600px;
+    position: relative;
+    aspect-ratio: 1.1;
+    align-self: center;
+    width: 100%;
+}
+
+a svg {
+    width: 24px;
+    height: 24px;
+    padding-left: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .g-box {
+        flex-direction: row;
+    }
+
+    .g-main {
+        flex-direction: row;
+    }
+
+    .g-box_content>a {
+        font-size: 20px;
+    }
+
+    .g-box_content {
+        padding: 60px 40px;
+        width: 50%;
+    }
+
+    .g-box_img {
+        width: 50%;
+    }
+
+    .g-dir-reverse {
+        flex-direction: row-reverse;
+    }
+    .g-button-primary {
+        font-size: 16px;
+    }
+}
+
+.g-logo a {
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.g-header-container {
+    display: flex;
+    padding: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.g-nav-toggle_button svg {
+    height: 16px;
+    width: 16px;
+}
+
+.g-nav li,
+.g-nav div,
+.g-nav-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.g-nav-toggle {
+    display: none;
+}
+
+.g-nav a {
+    padding: 0 20px;
+    color: #5D5D5D;
+}
+
+.g-contact-us {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+    .g-nav-small {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #eee;
+        z-index: 10;
+        display: block;
+        padding: 20px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .g-nav-visible {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .g-nav-small ul {
+        display: block;
+    }
+
+    .g-nav-small a {
+        padding: 8px;
+        padding-right: 200px;
+    }
+
+    .g-nav-toggle {
+        display: block;
+    }
+
+    .g-contact-us {
+        margin-top: 1em;
+    }
+}
