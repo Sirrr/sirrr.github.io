@@ -31,6 +31,7 @@ p {
     margin: 0;
     margin-bottom: 0.5em;
     letter-spacing: 0.1px;
+    line-height: 1.5em;
 }
 
 a {
@@ -61,6 +62,10 @@ li {
 
 .mt-1 {
     margin-top: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
 }
 
 .g-hidden {
@@ -101,12 +106,12 @@ li {
 
 .g-main p {
     max-width: 300px;
-    line-height: 1.5em;
     color: #585858;
 }
 
 .g-main h1 {
     max-width: 300px;
+    font-weight: 900;
 }
 
 .g-main_content {
@@ -141,11 +146,17 @@ li {
     flex-direction: column;
 }
 
+.g-box_text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
 .g-box_content p {
     max-width: 300px;
 }
 
-.g-box_content > a {
+.g-box a {
     display: flex;
     margin-top: 1em;
     font-size: 16px;
@@ -235,11 +246,11 @@ footer h3 {
         height: 70vh;
     }
 
-    .g-box_content > a {
+    .g-box a {
         font-size: 20px;
     }
 
-    .g-box_content {
+    .g-box_content, .g-box_text {
         padding: 60px 40px;
         flex: 1;
     }
