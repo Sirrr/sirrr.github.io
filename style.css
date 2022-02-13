@@ -95,6 +95,22 @@ li {
     background-color: #3c9aff;
 }
 
+
+.g-logo {
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+
+.g-logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    margin-right: 8px;
+}
+
 .g-main {
     display: flex;
     max-width: 1624px;
@@ -250,7 +266,8 @@ footer h3 {
         font-size: 20px;
     }
 
-    .g-box_content, .g-box_text {
+    .g-box_content,
+    .g-box_text {
         padding: 60px 40px;
         flex: 1;
     }
@@ -269,12 +286,6 @@ footer h3 {
     .g-footer-wrapper {
         grid-template-columns: 2fr 1fr 1fr;
     }
-}
-
-.g-logo a {
-    color: black;
-    font-size: 20px;
-    font-weight: 900;
 }
 
 .g-header-container {
