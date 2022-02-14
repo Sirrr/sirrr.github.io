@@ -294,7 +294,7 @@ header {
     top: 0px;
     z-index: 100;
     backdrop-filter: blur(16px);
-    background-color: rgba(240, 240, 240, 0.95);
+    background-color: rgba(240, 240, 240, 0.8);
 }
 
 .g-header-container {
@@ -348,11 +348,10 @@ header {
 @media screen and (max-width: 700px) {
     .g-nav-small {
         position: fixed;
-        top: 56px;
+        top: 52px;
         left: 0;
         right: 0;
-        backdrop-filter: blur(16px);
-    background-color: rgba(240, 240, 240, 0.95);
+        background-color: rgba(240, 240, 240, 0.98);
         z-index: 100;
         display: block;
         padding: 20px;
@@ -365,6 +364,7 @@ header {
         opacity: 1;
         transform: translateY(0px);
         transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+        border-bottom: 1px solid #aaa;
     }
 
     .g-nav-small ul {
@@ -382,5 +382,8 @@ header {
 
     .g-contact-us {
         margin-top: 1em;
+    }
+    .g-header-container {
+        padding: 8px 16px;
     }
 }
