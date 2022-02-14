@@ -24,10 +24,10 @@
             <div class="fill"></div>
             <div class="g-nav flex g-nav-small">
                 <ul class="flex">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Features</a></li>
-                    <li><a href="index.html">Story</a></li>
-                    <li><a href="index.html">About</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#story">Story</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
                 <div class="g-contact-us">
                     <a href="#" target="_blank" class="g-button-primary nowrap">Contact us</a>
@@ -51,7 +51,7 @@
         </div>
     </header>
 
-    <div class="g-main">
+    <div class="g-main" id="home">
         <div class="g-main_content">
             <h1>The Fabric of Reality</h1>
             <p>Battle and unleash secrets of the <b>Multiverse</b></p>
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="wrapper">
+    <div class="wrapper" id="features">
         <div class="g-box">
             <div class="g-box_content">
                 <h2>Battles</h2>
@@ -165,7 +165,7 @@
             </div>
         </div>
 
-        <div class="g-box">
+        <div class="g-box" id="about">
             <div class="g-box_text">
                 <h2>About</h2>
                 <p>What starts as a simple battle will unleash secrets that only worthy ones can handle. The clues are everywhere but you should be curious and persistent to find them and powerful enough to uncover. </p>
@@ -179,11 +179,11 @@
             </div>
         </div>
 
-        <div class="g-box">
+        <div class="g-box" id="story">
             <div class="g-box_text">
                 <h2>Story</h2>
                 <p>There are many myths about how it all started. None of them provide much confidence in believing in them. But one thing is clear: how it is discovered on Earth-351.</p>
-                <p>People say it was in the 21st century. A programmer was working late on a program when accidentally noticed something strange. He could not find the source of it and that did not make any sense. He spent days trying to debug it or find the source until he saw a pattern. He was able to decipher the code and read it. The logs were about the war and deadly battles. The more he spent time deciphering it the more he realized, the war is not in a specific place or time. It was a Multiversal War. Eager to know more he built a program to decipher the stream. The result became "The Fabric of Reality": a communicator between Worlds. His curiosity led to opening a portal to a Multiversal War, a story yet to be told.</p>
+                <p>People say it was in the 21st century. An engineer was working late on a program when accidentally noticed something strange. He could not find the source of it and that did not make any sense. He spent days trying to debug it or find the source until he saw a pattern. He was able to decipher the code and read it. The logs were about the war and deadly battles. The more he spent time deciphering it the more he realized, the war is not in a specific place or time. It was a Multiversal War. Eager to know more he built a program to decipher the stream. The result became "The Fabric of Reality": a communicator between Worlds. His curiosity led to opening a portal to a Multiversal War, a story yet to be told.</p>
                 <a href="#" class="mt-2">Get Started
                     <svg viewBox="0 0 24 24" size="24" aria-label="Get started" class="">
                         <g fill="currentColor">
@@ -203,11 +203,11 @@
                 <a href="#" class="g-button-primary nowrap mt-1">Join Now</a>
             </div>
             <div>
-                <h3>Usefull links</h3>
-                <a href="#">Home</a>
-                <a href="#">About us</a>
-                <a href="#">Features</a>
-                <a href="#">Story</a>
+                <h3>Useful links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#story">Story</a>
             </div>
             <div>
                 <h3>Have questions or want to share feedback?</h3>
@@ -222,12 +222,28 @@
 </body>
 
 <script>
-    document.getElementById('toggle-nav').onclick = () => {
+
+    function toggleNavbar() {
         const el = document.getElementsByClassName('g-nav-small')[0];
         el.classList.toggle('g-nav-visible');
         document.getElementById('nav-burger-icon').classList.toggle('g-hidden');
         document.getElementById('nav-close-icon').classList.toggle('g-hidden');
+    }
+    document.getElementById('toggle-nav').onclick = () => {
+        toggleNavbar();
     };
+
+    Array.from(document.querySelectorAll(".g-nav-small a")).forEach(el => {
+        el.onclick = () => {
+            const elemID = el.href.split('#')[1];
+            toggleNavbar();
+            window.scrollTo({
+                top: document.getElementById(elemID).getBoundingClientRect().top + window.scrollY - 70,
+                behavior: 'smooth'
+            });
+            return false;
+        };
+    });
 </script>
 
 </html>
