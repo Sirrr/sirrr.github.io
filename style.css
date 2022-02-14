@@ -294,6 +294,7 @@ header {
     top: 0px;
     z-index: 100;
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     background-color: rgba(240, 240, 240, 0.8);
 }
 
