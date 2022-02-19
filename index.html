@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
     <title>The Fabric of Reality</title>
 </head>
 
@@ -55,7 +56,7 @@
         <div class="g-main_content">
             <h1>The Fabric of Reality</h1>
             <p>Battle and unleash secrets of the <b>Multiverse</b></p>
-            <a href="#" class="g-button-primary nowrap mt-1">Join Now</a>
+            <button id="join-now" class="g-button-primary nowrap mt-1">Join Now</button>
         </div>
         <div class="g-main_img g-box_img mt-1">
             <img class="g-img-contain" src="img/main_img.png" alt="img">
@@ -219,6 +220,25 @@
         </div>
     </footer>
 
+    <div id="g-modal" class="modal">
+        <div id="g-modal-content" class="modal-content modal-content-anim">
+            <span class="close">
+                <svg id="nav-close-icon" class="flesx" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+                    <g fill="currentColors">
+                        <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z"></path>
+                    </g>
+                </svg>
+            </span>
+
+            <h2>Join now</h2>
+            <p>Get notified when the game is released. Be the first to play!</p>
+            <div class="g-input-container mt-1">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <button type="submit" class="g-button-primary mt-1">Submit</button>
+        </div>
+    </div>
+
 </body>
 
 <script>
@@ -244,6 +264,30 @@
             return false;
         };
     });
+
+    // Modal code
+    const modal = document.getElementById("g-modal");
+    const joinNow = document.getElementById("join-now");
+    const modalContent = document.getElementById("g-modal-content");
+    const closeX = document.getElementsByClassName("close")[0];
+
+    function closeModal() {
+        modal.style.display = "none";
+        modalContent.classList.toggle('modal-content-anim');
+        setTimeout(() => modalContent.classList.toggle('modal-content-anim'), 1);
+    }
+
+    joinNow.onclick = (event) => {
+        modal.style.display = "block";
+    }
+
+    closeX.onclick = closeModal;
+
+    modal.onclick = (event) => {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
 </script>
 
 </html>
